@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}
+
+{% endblock %}
+{% block content %}
+<div class="col-sm-6 col-sm-offset-3">
+	<h1>Success</h1>
+	<p>{{ object.web_link }}</p>
+	<p><a href="{{ object.get_shortlink }}">localhost:8000/{{ object.get_shortlink }}</a></p>
+	<a href="/">New</a>
+</div>
+{% endblock %}

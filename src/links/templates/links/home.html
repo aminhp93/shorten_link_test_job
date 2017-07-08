@@ -1,0 +1,12 @@
+{% extends 'base.html' %} 
+{% block title %} Main Content {% endblock %} 
+{% block content %}
+<div class="col-sm-6 col-sm-offset-3">
+    <h1>{{ title }}</h1>
+    <p class="lead">Shorten that URL</p>
+    <form action="" method="POST">
+        {% csrf_token %} {{ form.as_p }}
+        <input type="submit" class="btn btn-pirmary">
+    </form>
+</div>
+{% endblock %}

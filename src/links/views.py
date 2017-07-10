@@ -41,7 +41,7 @@ class HomeView(View):
 
 class LinkRedirectView(View):
 	def get(self, request, shortlink=None, *args, **kwargs):
-		qs = ManagerLink.objects.filter(shortlink__iexact=shortlink)
+		qs = Link.objects.filter(shortlink__iexact=shortlink)
 		if qs.count() != 1 and not qs.exists():
 			raise Http404
 		obj = qs.first()

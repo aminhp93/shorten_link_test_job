@@ -6,7 +6,7 @@
 <div class="col-sm-6 col-sm-offset-3">
 	<h1>Exists Already</h1>
 	<p>{{ object.web_link }}</p>
-	<p><a href="{{ object.get_shortlink }}">localhost:8000/{{ object.get_shortlink }}</a></p>
+	<p><a href="{{ object.get_shortlink }}">localhost:8000{{ object.get_shortlink }}</a></p>
 	<a href="/" class="btn btn-primary">New</a>
 </div>
 {% endblock %}

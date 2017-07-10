@@ -8,7 +8,7 @@ from .utils import link_generator, create_shortlink
 class Link(models.Model):
 	user 		= models.ForeignKey(settings.AUTH_USER_MODEL, blank=True, null=True)
 	link_web 	= models.CharField(max_length=255, blank=True)
-	shortlink 	= models.CharField(max_length=255, blank=True)
+	shortlink 	= models.CharField(max_length=255, blank=True, unique=True)
 	status 		= models.BooleanField(default=True)
 	timestamp 	= models.DateTimeField(auto_now_add=True)
 
